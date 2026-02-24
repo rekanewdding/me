@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan Alif & Zahra</title>
+    
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Custom -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💍</text></svg>">
+</head>
+<body>
+    <!-- Background Music -->
+    <audio id="bg-music" loop>
+        <source src="https://assets.mixkit.co/music/preview/mixkit-romantic-sunset-687.mp3" type="audio/mpeg">
+    </audio>
+    
+    <!-- Music Control -->
+    <button id="music-toggle" class="music-toggle">
+        <i class="fas fa-volume-up"></i>
+    </button>
+    
+    <!-- Particle Container -->
+    <div id="particles-container"></div>
+    
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="spinner-border text-light" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <p class="mt-3">Memuat undangan...</p>
+        </div>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="main-content" style="display: none;">
+        <!-- Section 1: Cover / Landing Page -->
+        <section id="cover" class="cover-section vh-100 d-flex align-items-center justify-content-center position-relative">
+            <div class="cover-overlay"></div>
+            <div class="cover-content text-center text-white z-1">
+                <h5 class="reveal-text fade-in-up" style="animation-delay: 0.2s;">Undangan Pernikahan</h5>
+                <h1 class="display-1 fw-bold reveal-text fade-in-up" style="animation-delay: 0.5s;">Alif <span class="accent-text">&</span> Zahra</h1>
+                <p class="lead mt-4 reveal-text fade-in-up" style="animation-delay: 0.8s;">Kami mengundang Anda untuk berbagi kebahagiaan kami</p>
+                <div class="mt-5 reveal-text fade-in-up" style="animation-delay: 1.1s;">
+                    <button id="open-invitation-btn" class="btn-elegant">
+                        <span>Buka Undangan</span>
+                        <i class="fas fa-chevron-down ms-2"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section 2: Opening -->
+        <section id="opening" class="section-padding">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <div class="glass-card p-5 reveal-text">
+                            <h3 class="section-title mb-4">Dengan penuh rasa syukur,</h3>
+                            <p class="opening-text">
+                                Atas rahmat dan karunia-Nya, kami bermaksud menyelenggarakan pernikahan putra-putri kami. 
+                                Kehadiran dan doa restu Bapak/Ibu/Saudara/i sekalian merupakan suatu kehormatan dan kebahagiaan bagi kami.
+                            </p>
+                            <div class="mt-4">
+                                <div class="ornament-line"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section 3: Couple Name -->
+        <section id="couple" class="section-padding bg-dark">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-5 text-center reveal-text">
+                        <div class="couple-image-container mb-4 mb-lg-0">
+                            <div class="couple-image-frame">
+                                <div class="couple-image-placeholder">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 reveal-text">
+                        <h3 class="section-title text-white mb-4">Yang Berbahagia</h3>
+                        <div class="couple-names">
+                            <div class="groom-name">
+                                <h2 class="display-4 fw-bold">Alif Ramadhan</h2>
+                                <p class="mb-0">Putra pertama dari Bapak Ahmad & Ibu Sari</p>
+                            </div>
+                            <div class="couple-symbol my-4">
+                                <span class="symbol-heart"><i class="fas fa-heart"></i></span>
+                            </div>
+                            <div class="bride-name">
+                                <h2 class="display-4 fw-bold">Zahra Amelia</h2>
+                                <p class="mb-0">Putri kedua dari Bapak Budi & Ibu Rina</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section 4: Countdown -->
+        <section id="countdown" class="section-padding parallax-section">
+            <div class="parallax-overlay"></div>
+            <div class="container position-relative z-1">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 text-center">
+                        <h3 class="section-title text-white mb-5">Menuju Hari Bahagia</h3>
+                        <div class="countdown-container reveal-text">
+                            <div class="countdown-grid">
+                                <div class="countdown-item">
+                                    <div class="countdown-value" id="days">00</div>
+                                    <div class="countdown-label">Hari</div>
+                                </div>
+                                <div class="countdown-item">
+                                    <div class="countdown-value" id="hours">00</div>
+                                    <div class="countdown-label">Jam</div>
+                                </div>
+                                <div class="countdown-item">
+                                    <div class="countdown-value" id="minutes">00</div>
+                                    <div class="countdown-label">Menit</div>
+                                </div>
+                                <div class="countdown-item">
+                                    <div class="countdown-value" id="seconds">00</div>
+                                    <div class="countdown-label">Detik</div>
+                                </div>
+                            </div>
+                            <p class="text-white mt-5 lead">Sabtu, 15 Februari 2026</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section 5: Event Details -->
+        <section id="event-details" class="section-padding">
+            <div class="container">
+                <h3 class="section-title text-center mb-5">Detail Acara</h3>
+                <div class="row">
+                    <div class="col-lg-6 mb-4 mb-lg-0 reveal-text">
+                        <div class="event-card glass-card p-5 h-100">
+                            <div class="event-icon mb-4">
+                                <i class="fas fa-mosque"></i>
+                            </div>
+                            <h4 class="event-title">Akad Nikah</h4>
+                            <div class="event-info">
+                                <p><i class="fas fa-calendar-alt me-2"></i> Sabtu, 15 Februari 2026</p>
+                                <p><i class="fas fa-clock me-2"></i> 08.00 - 10.00 WIB</p>
+                                <p><i class="fas fa-map-marker-alt me-2"></i> Masjid Al-Ikhlas<br>Jl. Merdeka No. 123, Jakarta</p>
+                            </div>
+                            <div class="mt-4">
+                                <a href="#" class="btn-elegant-outline">Simpan Lokasi</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 reveal-text" style="animation-delay: 0.3s;">
+                        <div class="event-card glass-card p-5 h-100">
+                            <div class="event-icon mb-4">
+                                <i class="fas fa-glass-cheers"></i>
+                            </div>
+                            <h4 class="event-title">Resepsi</h4>
+                            <div class="event-info">
+                                <p><i class="fas fa-calendar-alt me-2"></i> Sabtu, 15 Februari 2026</p>
+                                <p><i class="fas fa-clock me-2"></i> 11.00 - 14.00 WIB</p>
+                                <p><i class="fas fa-map-marker-alt me-2"></i> Grand Ballroom Hotel Majesty<br>Jl. Sudirman Kav. 45, Jakarta</p>
+                            </div>
+                            <div class="mt-4">
+                                <a href="#" class="btn-elegant-outline">Simpan Lokasi</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section 6: Love Story -->
+        <section id="love-story" class="section-padding bg-dark">
+            <div class="container">
+                <h3 class="section-title text-center text-white mb-5">Perjalanan Cinta Kami</h3>
+                <div class="timeline-container">
+                    <div class="timeline">
+                        <div class="timeline-item reveal-text">
+                            <div class="timeline-date">2018</div>
+                            <div class="timeline-content glass-card">
+                                <h5>Pertemuan Pertama</h5>
+                                <p>Kami bertemu di sebuah acara seminar kampus. Percakapan singkat yang berlanjut menjadi diskusi panjang tentang mimpi dan masa depan.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item reveal-text" style="animation-delay: 0.2s;">
+                            <div class="timeline-date">2019</div>
+                            <div class="timeline-content glass-card">
+                                <h5>Persahabatan yang Berarti</h5>
+                                <p>Menjalin persahabatan yang penuh dengan dukungan dan tawa. Setiap akhir pekan menjadi momen berharga untuk saling mengenal lebih dalam.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item reveal-text" style="animation-delay: 0.4s;">
+                            <div class="timeline-date">2022</div>
+                            <div class="timeline-content glass-card">
+                                <h5>Komitmen untuk Bersama</h5>
+                                <p>Memutuskan untuk menjalin hubungan serius dengan restu dari kedua keluarga. Mulai merencanakan masa depan bersama.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item reveal-text" style="animation-delay: 0.6s;">
+                            <div class="timeline-date">2024</div>
+                            <div class="timeline-content glass-card">
+                                <h5>Lamaran</h5>
+                                <p>Di bawah langit senja yang mempesona, Alif melamar Zahra dengan janji setia untuk seumur hidup. Momen tak terlupakan yang disaksikan keluarga.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item reveal-text" style="animation-delay: 0.8s;">
+                            <div class="timeline-date">2026</div>
+                            <div class="timeline-content glass-card">
+                                <h5>Hari Bahagia</h5>
+                                <p>Hari yang kami nantikan akhirnya tiba. Dengan penuh rasa syukur, kami menyatukan dua hati dalam ikatan pernikahan yang suci.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section 7: Gallery -->
+        <section id="gallery" class="section-padding">
+            <div class="container">
+                <h3 class="section-title text-center mb-5">Galeri Kenangan</h3>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4 reveal-text">
+                        <div class="gallery-item">
+                            <div class="gallery-image placeholder-image-1">
+                                <div class="gallery-overlay">
+                                    <i class="fas fa-search-plus"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 reveal-text" style="animation-delay: 0.2s;">
+                        <div class="gallery-item">
+                            <div class="gallery-image placeholder-image-2">
+                                <div class="gallery-overlay">
+                                    <i class="fas fa-search-plus"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 reveal-text" style="animation-delay: 0.4s;">
+                        <div class="gallery-item">
+                            <div class="gallery-image placeholder-image-3">
+                                <div class="gallery-overlay">
+                                    <i class="fas fa-search-plus"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 reveal-text" style="animation-delay: 0.6s;">
+                        <div class="gallery-item">
+                            <div class="gallery-image placeholder-image-4">
+                                <div class="gallery-overlay">
+                                    <i class="fas fa-search-plus"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 reveal-text" style="animation-delay: 0.8s;">
+                        <div class="gallery-item">
+                            <div class="gallery-image placeholder-image-5">
+                                <div class="gallery-overlay">
+                                    <i class="fas fa-search-plus"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 reveal-text" style="animation-delay: 1s;">
+                        <div class="gallery-item">
+                            <div class="gallery-image placeholder-image-6">
+                                <div class="gallery-overlay">
+                                    <i class="fas fa-search-plus"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section 8: RSVP -->
+        <section id="rsvp" class="section-padding parallax-section">
+            <div class="parallax-overlay"></div>
+            <div class="container position-relative z-1">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="glass-card p-5 reveal-text">
+                            <h3 class="section-title text-center mb-4">Konfirmasi Kehadiran</h3>
+                            <p class="text-center mb-5">Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu.</p>
+                            
+                            <form id="rsvp-form">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="name" placeholder="Nama Lengkap" required>
+                                            <label for="name">Nama Lengkap</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="attendance" required>
+                                                <option value="" selected disabled>Pilih...</option>
+                                                <option value="yes">Ya, saya akan hadir</option>
+                                                <option value="no">Maaf, tidak dapat hadir</option>
+                                            </select>
+                                            <label for="attendance">Konfirmasi Kehadiran</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" id="message" placeholder="Ucapan & Doa" style="height: 120px"></textarea>
+                                            <label for="message">Ucapan & Doa (opsional)</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 text-center">
+                                        <button type="submit" class="btn-elegant">
+                                            <span>Kirim Konfirmasi</span>
+                                            <i class="fas fa-paper-plane ms-2"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section 9: Location -->
+        <section id="location" class="section-padding">
+            <div class="container">
+                <h3 class="section-title text-center mb-5">Lokasi Acara</h3>
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0 reveal-text">
+                        <div class="location-card glass-card p-5 h-100">
+                            <h4 class="mb-4">Resepsi Pernikahan</h4>
+                            <div class="location-details">
+                                <p><i class="fas fa-hotel me-2"></i> <strong>Grand Ballroom Hotel Majesty</strong></p>
+                                <p><i class="fas fa-map-marker-alt me-2"></i> Jl. Sudirman Kav. 45, Jakarta Selatan</p>
+                                <p><i class="fas fa-clock me-2"></i> Sabtu, 15 Februari 2026 | 11.00 - 14.00 WIB</p>
+                            </div>
+                            <div class="location-actions mt-4">
+                                <a href="#" class="btn-elegant-outline me-3">
+                                    <i class="fas fa-directions me-2"></i>Petunjuk Arah
+                                </a>
+                                <a href="#" class="btn-elegant-outline">
+                                    <i class="fas fa-calendar-plus me-2"></i>Simpan ke Kalender
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 reveal-text" style="animation-delay: 0.3s;">
+                        <div class="location-placeholder">
+                            <div class="location-map">
+                                <div class="map-overlay">
+                                    <h5 class="mb-3">Hotel Majesty</h5>
+                                    <p>Grand Ballroom - Lantai 3</p>
+                                    <p class="small">*Peta interaktif dapat diakses dengan menekan tombol "Petunjuk Arah"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section 10: Footer -->
+        <footer class="footer-section bg-dark text-white">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h4 class="mb-4">Terima Kasih</h4>
+                        <p class="mb-5">Atas kehadiran, doa, dan restu yang diberikan. Semoga kita semua selalu berada dalam lindungan dan rahmat-Nya.</p>
+                        
+                        <div class="footer-couple">
+                            <h3 class="display-6 fw-light">Alif <span class="accent-text">&</span> Zahra</h3>
+                        </div>
+                        
+                        <div class="footer-actions mt-5">
+                            <a href="#cover" class="footer-link">
+                                <i class="fas fa-chevron-up me-2"></i>Kembali ke Atas
+                            </a>
+                        </div>
+                        
+                        <div class="footer-copyright mt-5 pt-4 border-top border-secondary">
+                            <p class="small mb-0">© 2026 Undangan Pernikahan Alif & Zahra. Dibuat dengan <i class="fas fa-heart text-danger mx-1"></i> untuk hari bahagia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNDANGAN PERNIKAHAN IKE & BOBY</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- PERBAIKAN: Google Fonts yang benar -->
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Dancing+Script:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="KLIK UNTUK MEMBUKA UNDANGAN">
+    <meta property="og:title" content="UNDANGAN PERNIKAHAN IKE & BOBY">
+    <meta property="og:description" content="KLIK UNTUK MEMBUKA UNDANGAN">
+    <meta property="og:image" content="img/cover.jpg">
+    <meta property="og:url" content="https://yourdomain.com">
+    <meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+    <!-- Music Player (Hidden Autoplay) -->
+    <audio id="weddingMusic" loop>
+        <source src="music/music.mp3" type="audio/mpeg">
+        Browser Anda tidak mendukung elemen audio.
+    </audio>
+    
+    <!-- Cover Screen -->
+    <section id="coverScreen" class="cover-screen active">
+        <div class="cover-overlay"></div>
+        <div class="cover-content">
+            <div class="cover-text">
+                <h1 class="cover-title">IKE & BOBY</h1>
+                <h2 class="cover-subtitle">Undangan Pernikahan</h2>
+                <p class="cover-date">22 JANUARI 2024</p>
+            </div>
+            <button id="openInvitation" class="cover-button">
+                <i class="fas fa-heart"></i> BUKA UNDANGAN
+            </button>
+            <div class="scroll-hint">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content (Hidden Initially) -->
+    <main id="mainContent" class="main-content">
+        <!-- Welcome Section -->
+        <section id="welcome" class="section welcome-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <div class="section-header">
+                            <h3 class="section-subtitle">The Wedding Of</h3>
+                            <h1 class="section-title">IKE & BOBY</h1>
+                            <div class="divider"></div>
+                            <p class="section-text">
+                                Dengan penuh rasa syukur dan kebahagiaan, kami mengundang Bapak/Ibu/Saudara/i 
+                                untuk hadir dalam acara pernikahan kami.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile" class="section profile-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- Bride -->
+                    <div class="col-md-4 text-center">
+                        <div class="profile-card">
+                            <div class="profile-img-container">
+                                <div class="profile-img-placeholder">
+                                    <i class="fas fa-female"></i>
+                                </div>
+                                <div class="profile-frame"></div>
+                            </div>
+                            <h3 class="profile-name">IKE SARI DEWI</h3>
+                            <p class="profile-desc">
+                                Putri pertama dari<br>
+                                Bapak Ahmad & Ibu Siti
+                            </p>
+                            <div class="social-icons">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Heart Center -->
+                    <div class="col-md-4 text-center">
+                        <div class="heart-container">
+                            <div class="heart-icon-wrapper">
+                                <i class="fas fa-heart heart-icon"></i>
+                            </div>
+                            <p class="heart-text">22.01.2024</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Groom -->
+                    <div class="col-md-4 text-center">
+                        <div class="profile-card">
+                            <div class="profile-img-container">
+                                <div class="profile-img-placeholder">
+                                    <i class="fas fa-male"></i>
+                                </div>
+                                <div class="profile-frame"></div>
+                            </div>
+                            <h3 class="profile-name">BOBY PRATAMA</h3>
+                            <p class="profile-desc">
+                                Putra pertama dari<br>
+                                Bapak Budi & Ibu Ani
+                            </p>
+                            <div class="social-icons">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Event Details -->
+        <section id="event" class="section event-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Detail Acara</h2>
+                    <div class="divider"></div>
+                </div>
+                
+                <div class="row">
+                    <!-- Akad Nikah -->
+                    <div class="col-md-6 mb-4">
+                        <div class="event-card">
+                            <div class="event-icon">
+                                <i class="fas fa-mosque"></i>
+                            </div>
+                            <h3 class="event-title">Akad Nikah</h3>
+                            <div class="event-details">
+                                <p><i class="far fa-calendar"></i> Minggu, 22 Januari 2024</p>
+                                <p><i class="far fa-clock"></i> 08:00 - 10:00 WIB</p>
+                                <p><i class="fas fa-map-marker-alt"></i> Masjid Al-Hikmah<br>Jl. Merdeka No. 123, Jakarta</p>
+                            </div>
+                            <button class="btn-event" data-location="-6.2088,106.8456">
+                                <i class="fas fa-map-marked-alt"></i> Buka Peta
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Resepsi -->
+                    <div class="col-md-6 mb-4">
+                        <div class="event-card">
+                            <div class="event-icon">
+                                <i class="fas fa-glass-cheers"></i>
+                            </div>
+                            <h3 class="event-title">Resepsi Pernikahan</h3>
+                            <div class="event-details">
+                                <p><i class="far fa-calendar"></i> Minggu, 22 Januari 2024</p>
+                                <p><i class="far fa-clock"></i> 11:00 - 14:00 WIB</p>
+                                <p><i class="fas fa-map-marker-alt"></i> Grand Ballroom Hotel Maju<br>Jl. Sudirman No. 456, Jakarta</p>
+                            </div>
+                            <button class="btn-event" data-location="-6.2256,106.8036">
+                                <i class="fas fa-map-marked-alt"></i> Buka Peta
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <div class="dress-code">
+                            <h4><i class="fas fa-tshirt"></i> Kode Busana</h4>
+                            <div class="dress-colors">
+                                <div class="color-box" style="background-color: #7A9779;">
+                                    <span>Wanita</span>
+                                    <small>Pastel Green</small>
+                                </div>
+                                <div class="color-box" style="background-color: #B7881E;">
+                                    <span>Pria</span>
+                                    <small>Gold Brown</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Countdown Section -->
+        <section id="countdown" class="section countdown-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <div class="section-header">
+                            <h2 class="section-title">Menuju Hari Bahagia</h2>
+                            <div class="divider"></div>
+                        </div>
+                        
+                        <div class="countdown-container">
+                            <div class="countdown-box">
+                                <div class="countdown-number" id="days">00</div>
+                                <div class="countdown-label">Hari</div>
+                            </div>
+                            <div class="countdown-separator">:</div>
+                            <div class="countdown-box">
+                                <div class="countdown-number" id="hours">00</div>
+                                <div class="countdown-label">Jam</div>
+                            </div>
+                            <div class="countdown-separator">:</div>
+                            <div class="countdown-box">
+                                <div class="countdown-number" id="minutes">00</div>
+                                <div class="countdown-label">Menit</div>
+                            </div>
+                            <div class="countdown-separator">:</div>
+                            <div class="countdown-box">
+                                <div class="countdown-number" id="seconds">00</div>
+                                <div class="countdown-label">Detik</div>
+                            </div>
+                        </div>
+                        
+                        <p class="countdown-text">
+                            Kami tidak sabar menanti kehadiran Anda di hari spesial kami
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="section gallery-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Galeri Kenangan</h2>
+                    <div class="divider"></div>
+                </div>
+                
+                <div class="gallery-container">
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <div class="gallery-img-placeholder">
+                                <i class="fas fa-image"></i>
+                                <p>Foto 1</p>
+                            </div>
+                            <div class="gallery-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="gallery-img-placeholder">
+                                <i class="fas fa-image"></i>
+                                <p>Foto 2</p>
+                            </div>
+                            <div class="gallery-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="gallery-img-placeholder">
+                                <i class="fas fa-image"></i>
+                                <p>Foto 3</p>
+                            </div>
+                            <div class="gallery-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gallery Modal -->
+                <div class="gallery-modal">
+                    <div class="modal-content">
+                        <span class="modal-close">&times;</span>
+                        <div class="modal-img-placeholder">
+                            <i class="fas fa-image"></i>
+                            <p>Gambar akan muncul di sini</p>
+                        </div>
+                        <div class="modal-nav">
+                            <button class="modal-prev"><i class="fas fa-chevron-left"></i></button>
+                            <button class="modal-next"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gift Section -->
+        <section id="gift" class="section gift-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="gift-card">
+                            <div class="section-header">
+                                <h2 class="section-title">Kado Spesial</h2>
+                                <div class="divider"></div>
+                                <p class="section-text">
+                                    Kehadiran Anda adalah hadiah terindah bagi kami. 
+                                    Jika ingin memberikan tanda kasih, berikut informasi rekening kami:
+                                </p>
+                            </div>
+                            
+                            <div class="bank-details">
+                                <div class="bank-card">
+                                    <div class="bank-header">
+                                        <div class="bank-logo-placeholder">
+                                            <i class="fas fa-university"></i>
+                                        </div>
+                                        <div class="bank-info">
+                                            <h4>Bank Central</h4>
+                                            <p>Rekening Wedding Gift</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="account-details">
+                                        <div class="account-item">
+                                            <span class="account-label">Atas Nama</span>
+                                            <span class="account-value">IKE SARI DEWI & BOBY PRATAMA</span>
+                                        </div>
+                                        <div class="account-item">
+                                            <span class="account-label">Nomor Rekening</span>
+                                            <div class="account-number">
+                                                <span id="accountNumber">1234 5678 9012 3456</span>
+                                                <button id="copyButton" class="copy-btn" data-clipboard-text="1234567890123456">
+                                                    <i class="far fa-copy"></i> Salin
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="qr-code">
+                                        <div class="qr-container">
+                                            <canvas id="qrCanvas"></canvas>
+                                        </div>
+                                        <p class="qr-text">Scan QR Code untuk transfer</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Toast Notification -->
+                            <div class="toast-container">
+                                <div id="copyToast" class="toast">
+                                    <div class="toast-body">
+                                        <i class="fas fa-check-circle"></i> Nomor rekening berhasil disalin!
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location Section -->
+        <section id="location" class="section location-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Lokasi Acara</h2>
+                    <div class="divider"></div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="location-info">
+                            <h3><i class="fas fa-map-marker-alt"></i> Grand Ballroom Hotel Maju</h3>
+                            <p class="location-address">
+                                Jl. Sudirman No. 456, Kebayoran Baru<br>
+                                Jakarta Selatan 12190
+                            </p>
+                            <div class="location-features">
+                                <p><i class="fas fa-car"></i> Parkir luas tersedia</p>
+                                <p><i class="fas fa-wheelchair"></i> Akses difabel ramah</p>
+                                <p><i class="fas fa-wifi"></i> Free WiFi</p>
+                            </div>
+                            <button id="openMaps" class="btn-location">
+                                <i class="fas fa-directions"></i> Buka di Google Maps
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="map-container">
+                            <div id="googleMap" class="map-placeholder">
+                                <i class="fas fa-map"></i>
+                                <p>Peta Lokasi</p>
+                                <small>(Google Maps dapat diaktifkan nanti)</small>
+                            </div>
+                            <div class="map-overlay">
+                                <p>Klik untuk membuka di Google Maps</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guest Book -->
+        <section id="guestbook" class="section guestbook-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="guestbook-card">
+                            <div class="section-header">
+                                <h2 class="section-title">Buku Tamu</h2>
+                                <div class="divider"></div>
+                                <p class="section-text">
+                                    Berikan ucapan dan doa untuk kami. Setiap kata berarti bagi perjalanan kami.
+                                </p>
+                            </div>
+                            
+                            <form id="guestForm" class="guest-form">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <div class="form-group">
+                                            <label for="guestName"><i class="fas fa-user"></i> Nama Lengkap</label>
+                                            <input type="text" id="guestName" class="form-control" placeholder="Masukkan nama Anda" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="form-group">
+                                            <label for="guestAttendance"><i class="fas fa-calendar-check"></i> Konfirmasi Kehadiran</label>
+                                            <select id="guestAttendance" class="form-control" required>
+                                                <option value="">Pilih...</option>
+                                                <option value="hadir">Akan Hadir</option>
+                                                <option value="mungkin">Mungkin Hadir</option>
+                                                <option value="tidak">Tidak Hadir</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group mb-4">
+                                    <label for="guestMessage"><i class="fas fa-comment-dots"></i> Ucapan & Doa</label>
+                                    <textarea id="guestMessage" class="form-control" rows="4" placeholder="Tulis ucapan dan doa terbaik Anda..." required></textarea>
+                                </div>
+                                
+                                <button type="submit" class="btn-submit">
+                                    <i class="fas fa-paper-plane"></i> Kirim Ucapan
+                                </button>
+                            </form>
+                            
+                            <div class="guestbook-entries mt-5">
+                                <h4>Ucapan dari Tamu</h4>
+                                <div id="guestList" class="guest-list">
+                                    <!-- Guest entries will be loaded here -->
+                                    <div class="no-guest">
+                                        <i class="fas fa-comments"></i>
+                                        <p>Belum ada ucapan. Jadilah yang pertama!</p>
+                                    </div>
+                                </div>
+                                <button id="loadMore" class="btn-load" style="display: none;">Muat Lebih Banyak</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Closing Section -->
+        <section id="closing" class="section closing-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <div class="closing-content">
+                            <h2 class="closing-title">Terima Kasih</h2>
+                            <p class="closing-text">
+                                Atas kehadiran dan doa restunya,<br>
+                                kami ucapkan terima kasih.
+                            </p>
+                            <div class="closing-names">
+                                <h3>Ike & Boby</h3>
+                            </div>
+                            <div class="closing-social">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="footer-text">
+                        Made with <i class="fas fa-heart"></i> for Ike & Boby
+                    </p>
+                    <p class="footer-copyright">
+                        &copy; 2024 Undangan Digital. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- QR Code Library -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+    
+    <!-- PERBAIKAN: Google Maps API - DIHAPUS DULU -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script> -->
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>

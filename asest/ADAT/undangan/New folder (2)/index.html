@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan Rai & Sari</title>
+    
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Custom -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+</head>
+<body>
+    <!-- Background Music -->
+    <audio id="bg-music" loop>
+        <source src="https://assets.mixkit.co/music/preview/mixkit-chill-vibes-219.mp3" type="audio/mpeg">
+    </audio>
+    
+    <!-- Floating Elements -->
+    <div id="floating-elements">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+        <div class="floating-shape shape-4"></div>
+        <div class="floating-shape shape-5"></div>
+        <div class="floating-shape shape-6"></div>
+    </div>
+    
+    <!-- Music Control -->
+    <div class="music-control">
+        <button id="music-toggle" class="music-btn">
+            <i class="fas fa-volume-up"></i>
+            <span class="music-label">Sound On</span>
+        </button>
+    </div>
+    
+    <!-- Dark Mode Toggle -->
+    <div class="theme-toggle">
+        <button id="theme-switch" class="theme-btn">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+    
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <span class="loading-emoji">💫</span>
+            </div>
+            <div class="loading-text">
+                <h3 class="loading-title">Loading...</h3>
+                <p class="loading-subtitle">Preparing something special ✨</p>
+            </div>
+            <div class="loading-progress">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="main-content" style="display: none;">
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-text">💖 Wedding Invitation</span>
+                </div>
+                <h1 class="hero-title">Rai <span class="heart-emoji">❤️</span> Sari</h1>
+                <p class="hero-subtitle">Save The Date</p>
+                <div class="hero-date">
+                    <span class="date-number">15</span>
+                    <span class="date-month">Feb</span>
+                    <span class="date-year">2026</span>
+                </div>
+                <div class="hero-scroll">
+                    <button id="open-invitation" class="genz-btn pulse">
+                        <span class="btn-text">Buka Undangan</span>
+                        <i class="fas fa-arrow-down btn-icon"></i>
+                    </button>
+                    <div class="scroll-hint">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-gradient"></div>
+        </section>
+        
+        <!-- Opening Section -->
+        <section id="opening" class="section opening-section">
+            <div class="container">
+                <div class="opening-card glass-card">
+                    <div class="opening-header">
+                        <h2 class="section-title">Hey Bestie! 👋</h2>
+                        <p class="section-subtitle">We're getting married!</p>
+                    </div>
+                    <div class="opening-content">
+                        <p class="opening-text">
+                            Setelah sekian lama saling support, ngobrol sampe pagi, dan barengan through thick and thin, 
+                            akhirnya kita memutuskan untuk officially become each other's person. 
+                            <span class="highlight-text">We'd love for you to be part of our special day!</span>
+                        </p>
+                        <div class="opening-emoji">
+                            ✨💕🎉
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Couple Section -->
+        <section id="couple" class="section couple-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Meet The Squad 💑</h2>
+                    <p class="section-subtitle">The ones saying "I do"</p>
+                </div>
+                <div class="couple-container">
+                    <div class="couple-card groom">
+                        <div class="couple-avatar">
+                            <div class="avatar-image groom-img"></div>
+                            <div class="avatar-badge">👨‍💻</div>
+                        </div>
+                        <div class="couple-info">
+                            <h3 class="couple-name">Rai Aditya</h3>
+                            <p class="couple-bio">Software Engineer • Coffee addict • Gamer</p>
+                            <div class="couple-social">
+                                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-spotify"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="couple-heart">
+                        <div class="heart-container">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="couple-card bride">
+                        <div class="couple-avatar">
+                            <div class="avatar-image bride-img"></div>
+                            <div class="avatar-badge">🎨</div>
+                        </div>
+                        <div class="couple-info">
+                            <h3 class="couple-name">Sari Putri</h3>
+                            <p class="couple-bio">Graphic Designer • Plant mom • Foodie</p>
+                            <div class="couple-social">
+                                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Countdown Section -->
+        <section id="countdown" class="section countdown-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Countdown is On! ⏳</h2>
+                    <p class="section-subtitle">T minus...</p>
+                </div>
+                <div class="countdown-container">
+                    <div class="countdown-card">
+                        <div class="countdown-grid">
+                            <div class="countdown-item">
+                                <div class="countdown-number" id="days">00</div>
+                                <div class="countdown-label">Days</div>
+                            </div>
+                            <div class="countdown-item">
+                                <div class="countdown-number" id="hours">00</div>
+                                <div class="countdown-label">Hours</div>
+                            </div>
+                            <div class="countdown-item">
+                                <div class="countdown-number" id="minutes">00</div>
+                                <div class="countdown-label">Minutes</div>
+                            </div>
+                            <div class="countdown-item">
+                                <div class="countdown-number" id="seconds">00</div>
+                                <div class="countdown-label">Seconds</div>
+                            </div>
+                        </div>
+                        <div class="countdown-date">
+                            <p><i class="far fa-calendar-alt"></i> Sabtu, 15 Februari 2026</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Event Details -->
+        <section id="events" class="section events-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Event Details 📅</h2>
+                    <p class="section-subtitle">Mark your calendar!</p>
+                </div>
+                <div class="events-grid">
+                    <div class="event-card akad">
+                        <div class="event-icon">
+                            <i class="fas fa-mosque"></i>
+                        </div>
+                        <div class="event-content">
+                            <h3 class="event-title">Akad Nikah</h3>
+                            <div class="event-details">
+                                <p><i class="far fa-clock"></i> 08.00 - 10.00 WIB</p>
+                                <p><i class="fas fa-map-marker-alt"></i> Masjid Al-Ikhlas, Jakarta</p>
+                            </div>
+                            <div class="event-note">
+                                <p><i class="fas fa-info-circle"></i> Dress code: Pastel colors</p>
+                            </div>
+                            <button class="event-btn">
+                                <i class="far fa-calendar-plus"></i> Add to Calendar
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="event-card resepsi">
+                        <div class="event-icon">
+                            <i class="fas fa-glass-cheers"></i>
+                        </div>
+                        <div class="event-content">
+                            <h3 class="event-title">Resepsi</h3>
+                            <div class="event-details">
+                                <p><i class="far fa-clock"></i> 11.00 - 14.00 WIB</p>
+                                <p><i class="fas fa-map-marker-alt"></i> The Garden Venue, Jakarta</p>
+                            </div>
+                            <div class="event-note">
+                                <p><i class="fas fa-info-circle"></i> Dress code: Semi-formal</p>
+                            </div>
+                            <button class="event-btn">
+                                <i class="far fa-calendar-plus"></i> Add to Calendar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Love Story -->
+        <section id="story" class="section story-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Our Story 💫</h2>
+                    <p class="section-subtitle">From swipe right to "I do"</p>
+                </div>
+                <div class="story-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2020</div>
+                        <div class="timeline-content">
+                            <div class="timeline-icon">👋</div>
+                            <h4 class="timeline-title">First Meet</h4>
+                            <p class="timeline-text">Met at a mutual friend's birthday party. Bonded over our love for indie music and bad memes.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2021</div>
+                        <div class="timeline-content">
+                            <div class="timeline-icon">💕</div>
+                            <h4 class="timeline-title">Official</h4>
+                            <p class="timeline-text">Made it Instagram official after months of late-night calls and weekend adventures.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023</div>
+                        <div class="timeline-content">
+                            <div class="timeline-icon">✈️</div>
+                            <h4 class="timeline-title">First Trip</h4>
+                            <p class="timeline-text">Traveled to Bali together. Survived a scooter ride in the rain (and many food adventures).</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2024</div>
+                        <div class="timeline-content">
+                            <div class="timeline-icon">💍</div>
+                            <h4 class="timeline-title">The Proposal</h4>
+                            <p class="timeline-text">He proposed during sunset at our favorite coffee spot. Said "yes" before he even finished asking.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2026</div>
+                        <div class="timeline-content">
+                            <div class="timeline-icon">🎉</div>
+                            <h4 class="timeline-title">The Big Day</h4>
+                            <p class="timeline-text">Finally making it official with all our favorite people. Can't wait to celebrate with you!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Gallery -->
+        <section id="gallery" class="section gallery-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Memory Lane 📸</h2>
+                    <p class="section-subtitle">Some of our favorite moments</p>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <div class="gallery-img img-1">
+                            <div class="gallery-overlay">
+                                <span class="gallery-caption">First date vibes</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-img img-2">
+                            <div class="gallery-overlay">
+                                <span class="gallery-caption">Bali sunset</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-img img-3">
+                            <div class="gallery-overlay">
+                                <span class="gallery-caption">Coffee dates</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-img img-4">
+                            <div class="gallery-overlay">
+                                <span class="gallery-caption">The proposal</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-img img-5">
+                            <div class="gallery-overlay">
+                                <span class="gallery-caption">Food adventures</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-img img-6">
+                            <div class="gallery-overlay">
+                                <span class="gallery-caption">Just us</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- RSVP -->
+        <section id="rsvp" class="section rsvp-section">
+            <div class="container">
+                <div class="rsvp-card glass-card">
+                    <div class="section-header">
+                        <h2 class="section-title">RSVP 🙌</h2>
+                        <p class="section-subtitle">Let us know if you can make it!</p>
+                    </div>
+                    <form id="rsvp-form" class="rsvp-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name"><i class="far fa-user"></i> Your Name</label>
+                                <input type="text" id="name" placeholder="Enter your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="guest"><i class="fas fa-users"></i> Number of Guests</label>
+                                <select id="guest" required>
+                                    <option value="" disabled selected>Select</option>
+                                    <option value="1">Just me (1)</option>
+                                    <option value="2">Me + 1 (2)</option>
+                                    <option value="3">Me + 2 (3)</option>
+                                    <option value="4">Me + 3 (4)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="far fa-check-circle"></i> Will you attend?</label>
+                            <div class="attendance-options">
+                                <label class="option-btn">
+                                    <input type="radio" name="attendance" value="yes" required>
+                                    <span class="option-content">
+                                        <i class="fas fa-check"></i>
+                                        <span>Yes, I'll be there! 🎉</span>
+                                    </span>
+                                </label>
+                                <label class="option-btn">
+                                    <input type="radio" name="attendance" value="no" required>
+                                    <span class="option-content">
+                                        <i class="fas fa-times"></i>
+                                        <span>Can't make it 😔</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message"><i class="far fa-comment-dots"></i> Send us a message (optional)</label>
+                            <textarea id="message" placeholder="Leave a sweet note or advice for us..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <i class="far fa-paper-plane"></i> Submit Response
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Location -->
+        <section id="location" class="section location-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Location 📍</h2>
+                    <p class="section-subtitle">Where the magic happens</p>
+                </div>
+                <div class="location-container">
+                    <div class="location-card">
+                        <div class="location-header">
+                            <h3><i class="fas fa-glass-cheers"></i> The Garden Venue</h3>
+                            <p class="location-address">Jl. Sudirman No. 123, Jakarta Selatan</p>
+                        </div>
+                        <div class="location-details">
+                            <div class="detail-item">
+                                <i class="far fa-calendar"></i>
+                                <div>
+                                    <p class="detail-label">Date</p>
+                                    <p class="detail-value">15 Feb 2026</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="far fa-clock"></i>
+                                <div>
+                                    <p class="detail-label">Time</p>
+                                    <p class="detail-value">11.00 - 14.00 WIB</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-map-pin"></i>
+                                <div>
+                                    <p class="detail-label">Venue</p>
+                                    <p class="detail-value">Grand Ballroom (Floor 3)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="location-actions">
+                            <a href="#" class="location-btn">
+                                <i class="fas fa-directions"></i> Get Directions
+                            </a>
+                            <a href="#" class="location-btn">
+                                <i class="fas fa-car"></i> Parking Info
+                            </a>
+                        </div>
+                    </div>
+                    <div class="location-map">
+                        <div class="map-placeholder">
+                            <div class="map-content">
+                                <i class="fas fa-map-marked-alt"></i>
+                                <p>Map location will appear here</p>
+                                <small>Tap for directions</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <h3>Rai <span class="footer-heart">❤️</span> Sari</h3>
+                        <p class="footer-date">15.02.2026</p>
+                    </div>
+                    <div class="footer-text">
+                        <p>Thank you for being part of our journey! Can't wait to celebrate with you all. 💖</p>
+                    </div>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-spotify"></i></a>
+                        <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                    <div class="footer-copy">
+                        <p>Made with <i class="fas fa-heart"></i> for our favorite people</p>
+                        <p class="footer-note">#RaiSariForever • #TheBigDay2026</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
